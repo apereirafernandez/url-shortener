@@ -2,17 +2,6 @@
   <div>
     <h1>URL Shortener</h1>
 
-    <!-- <form method="post" action="shortener">
-      <div id="formurl">
-        <input type="text" placeholder="Insert URL" />
-
-        <button v-on:click="shortUrl" class="button button1">
-          Go!
-        </button>
-    
-      </div>
-    </form> -->
-
     <input type="text" placeholder="Insert URL" v-model="longUrl" />
 
     <button v-on:click="shortUrl" class="button button1">
@@ -25,11 +14,6 @@
       </div>
       <div class="list">
         {{ urlList }}
-
-        <!-- <ol>
-  <li>test1</li>
-  <li>test2</li>
-</ol> -->
       </div>
     </section>
   </div>
@@ -45,7 +29,6 @@ export default {
   }),
   methods: {
     shortUrl() {
-      console.log(this.longUrl, "this.longUrl");
       axios({
         method: "post",
         url: "http://localhost:3000/shorten",

@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-link />
   </div>
 </template>
 
@@ -30,11 +26,10 @@
   color: #42b983;
 }
 
-#formurl input  {
+#formurl input {
   width: 35%;
   height: 16px;
   padding: 12px 30px;
-
 }
 
 .list {
@@ -52,17 +47,14 @@
   cursor: pointer;
 }
 
-
 .button1:hover {
   background-color: #42b983;
   color: white;
-  
 }
 
 .button1 {
   background-color: white;
   color: black;
   border: 2px solid #42b983;
- 
 }
 </style>
