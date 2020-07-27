@@ -1,24 +1,8 @@
 # url-shortener
 
-## Project setup
-```
-npm install
-```
+cd frontend
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+docker build . -t urlf
 
-### Compiles and minifies for production
-```
-npm run build
-```
+docker run urlf -p 8080:8080
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
