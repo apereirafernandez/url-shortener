@@ -1,0 +1,27 @@
+version: '3.8'
+
+services: 
+    backend:
+        build: 
+            context: ./backend/
+            dockerfile: Dockerfile
+        container_name: backend
+        restart: always
+        ports:
+            - "3000: 3000"
+        volumes: 
+            - . : /app
+
+
+
+
+    frontend:
+        build:
+            context: ./frontend/
+            dockerfile: Dockerfile
+        container_name: frontend
+        restart: always
+        ports:
+            - "8080: 8080"
+        volumes:
+            - . : /app
